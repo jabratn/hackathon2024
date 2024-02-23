@@ -18,6 +18,10 @@ Oh, but to get a combined image we have to build it. So let's try `./build.sh --
 
 Crucial for fixing the realsense build: https://github.com/dusty-nv/jetson-containers/issues/281.
 
+However, when running the container it seems impossible to get the Intel® RealSense™ ROS2 wrapper.
+
+Try again, now with pre-built image: `./run.sh $(./autotag  dustynv/ros:humble-ros-base-l4t-r32.7.1)`.
+
 ## Optional
 
 ### Python
@@ -29,8 +33,9 @@ To install a more recent version of Python: https://computingforgeeks.com/how-to
 - https://github.com/quebeh/n10.git - experiment getting serial data using Python script
 - https://gitee.com/astraLX/lsn10 - example with documentation (red: 5V, black: GND, green: RX, yellow: TX - 3V3 uart TTL)
 
-![image](https://github.com/jabratn/hackathon2024/assets/10284201/85251435-99b7-4ee1-a86c-9e1f8b3e9ada)
-![image](https://github.com/jabratn/hackathon2024/assets/10284201/2fb1b9fe-7e04-4732-b315-403e12aa9a4a)
+![image](https://github.com/jabratn/hackathon2024/assets/10284201/22f27486-87b4-42c7-8efc-5c80700d7217)
+
+![image](https://github.com/jabratn/hackathon2024/assets/10284201/02a73f8e-2a8e-4985-b729-fcb20473b32d)
 
 ## Also interesting
 
@@ -40,6 +45,11 @@ To install a more recent version of Python: https://computingforgeeks.com/how-to
 ### Yocto
 - https://news.accelerationrobotics.com/ros-2-humble-in-nvidia-jetson-nano-with-yocto/
 
+Install and build is looking good, but eventually breaks with:
+
+```| bin/cmake: /home/bartjan/Sandbox/yocto/tegra-bsp-honister/build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by bin/cmake)```
+
+
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
 
@@ -48,3 +58,6 @@ To install a more recent version of Python: https://computingforgeeks.com/how-to
 
 ### other docker
 - https://github.com/2b-t/realsense-ros2-docker
+
+### other robot
+- https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
