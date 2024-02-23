@@ -18,6 +18,8 @@ Oh, but to get a combined image we have to build it. So let's try `./build.sh --
 
 Crucial for fixing the realsense build: https://github.com/dusty-nv/jetson-containers/issues/281.
 
+However, when running the container it seems impossible to get the Intel® RealSense™ ROS2 wrapper.
+
 ## Optional
 
 ### Python
@@ -40,6 +42,10 @@ To install a more recent version of Python: https://computingforgeeks.com/how-to
 ### Yocto
 - https://news.accelerationrobotics.com/ros-2-humble-in-nvidia-jetson-nano-with-yocto/
 
+Install and build is looking good, but eventually breaks with:
+
+```| bin/cmake: /home/bartjan/Sandbox/yocto/tegra-bsp-honister/build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by bin/cmake)```
+
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
 
@@ -48,3 +54,6 @@ To install a more recent version of Python: https://computingforgeeks.com/how-to
 
 ### other docker
 - https://github.com/2b-t/realsense-ros2-docker
+
+### other robot
+- https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
