@@ -31,8 +31,8 @@ To install a more recent version of Python: https://computingforgeeks.com/how-to
 - https://github.com/quebeh/n10.git - experiment getting serial data using Python script
 - https://gitee.com/astraLX/lsn10 - example with documentation (red: 5V, black: GND, green: RX, yellow: TX - 3V3 uart TTL)
 
-![image](https://github.com/jabratn/hackathon2024/assets/10284201/85251435-99b7-4ee1-a86c-9e1f8b3e9ada)
-![image](https://github.com/jabratn/hackathon2024/assets/10284201/2fb1b9fe-7e04-4732-b315-403e12aa9a4a)
+![image](https://github.com/jabratn/hackathon2024/assets/10284201/66827c2e-fab9-42cb-9353-d91d240317f1)
+![image](https://github.com/jabratn/hackathon2024/assets/10284201/02a73f8e-2a8e-4985-b729-fcb20473b32d)
 
 ## Also interesting
 
