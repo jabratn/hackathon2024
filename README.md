@@ -20,7 +20,7 @@ Crucial for fixing the realsense build: https://github.com/dusty-nv/jetson-conta
 
 However, when running the container it seems impossible to get the Intel® RealSense™ ROS2 wrapper.
 
-Try again, now with pre-built image: `./run.sh $(./autotag  dustynv/ros:humble-ros-base-l4t-r32.7.1)`.
+Try again, now with pre-built image: `./run.sh $(./autotag  dustynv/ros:humble-ros-base-l4t-r32.7.1)`. Follow instructions to build from: https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md. Problem is driver build fails because of incompatible kernel version (4.9 vs. 4.15).
 
 ## Optional
 
@@ -49,6 +49,7 @@ Install and build is looking good, but eventually breaks with:
 
 ```| bin/cmake: /home/bartjan/Sandbox/yocto/tegra-bsp-honister/build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by bin/cmake)```
 
+Possible solution is to try to change GCC version in bitbake recipies (for native and cross build) from 11.2.0 to 11.4.0 (used in Linux Mint of build machine).
 
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
