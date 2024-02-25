@@ -22,6 +22,13 @@ However, when running the container it seems impossible to get the Intel® RealS
 
 Try again, now with pre-built image: `./run.sh $(./autotag  dustynv/ros:humble-ros-base-l4t-r32.7.1)`. Follow instructions to build from: https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md. Problem is driver build fails because of incompatible kernel version (4.9 vs. 4.15).
 
+### ROS2 foxy on 18.04
+Given the issues experienced with the dustynv docker images, let's try a direct install of Foxy on the Jetson nano
+- Get and flash latest SD-card image for Jetson nano (l4t-r32.7.4).
+- Update and upgrade.
+- Clone https://github.com/jetsonhacks/installROS2.git and execute `./installROS2.sh`.
+- Next install realsense driver and ROS package.
+
 ## Optional
 
 ### Python
