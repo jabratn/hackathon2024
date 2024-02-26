@@ -39,7 +39,8 @@ Again failure with errors.
 - https://github.com/linorobot/linorobot2
 - https://github.com/linorobot/ros2me
 - https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md
-- 
+
+Eloquent not supported by linorobot2.
 
 ## Optional
 
