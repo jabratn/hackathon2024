@@ -7,6 +7,8 @@ Jetson nano
 - l4t r32.7.4
 
 ## Installing ROS2
+
+### Dustynv
 https://developer.nvidia.com/blog/implementing-robotics-applications-with-ros-2-and-ai-on-jetson-platform-2/
 Clone https://github.com/dusty-nv/jetson-containers. Do the basic system setup (mainly mount external SSD for docker data) and use it to build:
 `./build.sh --name=my_ros ros:humble-base realsense`.
@@ -22,12 +24,22 @@ However, when running the container it seems impossible to get the Intel® RealS
 
 Try again, now with pre-built image: `./run.sh $(./autotag  dustynv/ros:humble-ros-base-l4t-r32.7.1)`. Follow instructions to build from: https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md. Problem is driver build fails because of incompatible kernel version (4.9 vs. 4.15).
 
+Failure with errors.
+
 ### ROS2 foxy on 18.04
 Given the issues experienced with the dustynv docker images, let's try a direct install of Foxy on the Jetson nano
 - Get and flash latest SD-card image for Jetson nano (l4t-r32.7.4).
 - Update and upgrade.
 - Clone https://github.com/jetsonhacks/installROS2.git and execute `./installROS2.sh`.
 - Next install realsense driver and ROS package.
+
+Again failure with errors.
+
+### Linorobot2
+- https://github.com/linorobot/linorobot2
+- https://github.com/linorobot/ros2me
+- https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md
+- 
 
 ## Optional
 
