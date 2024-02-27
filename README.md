@@ -52,8 +52,8 @@ Next attempt, following: https://github.com/jdgalviss/jetbot-ros2
 
 Rtabmap - no longer supports eloquent
 
-### Try Jetson Xavier NX
-
+### Jetson Xavier NX and NVidia Isaac
+- https://nvidia-isaac-ros.github.io/index.html
 
 ## Optional
 
