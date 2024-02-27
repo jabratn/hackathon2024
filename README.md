@@ -42,6 +42,19 @@ Again failure with errors.
 
 Eloquent not supported by linorobot2.
 
+### Jetbot-ros2
+Next attempt, following: https://github.com/jdgalviss/jetbot-ros2
+- Jetson nano (l4t-r32.7.4)
+- Install ros-eloquent packages
+- Install librealsense2 packages
+- Clone the various git repos.
+- Skip the Teleoperation support
+
+Rtabmap - no longer supports eloquent
+
+### Try Jetson Xavier NX
+
+
 ## Optional
 
 ### Python
@@ -82,3 +95,6 @@ Possible solution is to try to change GCC version in bitbake recipies (for nativ
 
 ### other robot
 - https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
+
+### other robot
+- https://developer.nvidia.com/embedded/community/jetson-projects/nanosaur
