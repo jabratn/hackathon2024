@@ -93,7 +93,12 @@ DEBUG: Mirror fetch failure for url git://github.com/git/OE4T/linux-tegra-4.9;pr
 
 Aha: URL should probably be: https://github.com/OE4T/linux-tegra-4.9/. Let's try to fix this. Mmm, do not know how (yet). Repeat bitbake, now it seems to work? Perhaps it was a hickup in the git clone?
 
-However, again, now with WSL2/Ubuntu-22.04 the error `libstdc++.so.6: version `GLIBCXX_3.4.30' not found` is thrown. Perhaps try to do this Yocto build from a Ubuntu-22.04 docker image?
+However, again, now with WSL2/Ubuntu-22.04 the error `libstdc++.so.6: version `GLIBCXX_3.4.30' not found` is thrown. Perhaps try to do this Yocto build from a Ubuntu-22.04 docker image? Fixed with: (see https://askubuntu.com/questions/1432031/how-to-fix-glibcxx-3-4-30-not-found-in-ubuntu-22-04)
+
+```
+bartj@CM-1000:~/build/tegra-bsp-honister$ rm ./build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6
+bartj@CM-1000:~/build/tegra-bsp-honister$ ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30 ./build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6
+```
 
 ### Buildroot
 - https://github.com/celaxodon/buildroot/tree/feat/jetson-nano-support-latest/board/nvidia/jetson_nano
