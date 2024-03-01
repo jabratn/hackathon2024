@@ -100,6 +100,12 @@ bartj@CM-1000:~/build/tegra-bsp-honister$ rm ./build/tmp/sysroots-uninative/x86_
 bartj@CM-1000:~/build/tegra-bsp-honister$ ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30 ./build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6
 ```
 
+Next try to fix `/home/bartj/build/tegra-bsp-honister/repos/meta-tegra/external/virtualization-layer/recipes-containers/nvidia-container-toolkit/nvidia-container-toolkit_1.0.5.bb` by switching to v1.1.0:
+```
+SRC_URI = "git://github.com/NVIDIA/nvidia-container-toolkit;protocol=https;branch=main"
+SRCREV = "9c2c610fcdfff18427a58f317ea5d27bb4b66880"                                                                                                   
+```
+
 ### Buildroot
 - https://github.com/celaxodon/buildroot/tree/feat/jetson-nano-support-latest/board/nvidia/jetson_nano
 
