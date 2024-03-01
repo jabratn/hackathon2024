@@ -91,7 +91,9 @@ fatal: repository 'https://github.com/git/OE4T/linux-tegra-4.9/' not found
 DEBUG: Mirror fetch failure for url git://github.com/git/OE4T/linux-tegra-4.9;protocol=https;name=machine;branch=oe4t-patches-l4t-r32.6 (original url: git://github.com/OE4T/linux-tegra-4.9;protocol=https;name=machine;branch=oe4t-patches-l4t-r32.6)
 ```
 
-Aha: URL should probably be: https://github.com/OE4T/linux-tegra-4.9/. Let's try to fix this.
+Aha: URL should probably be: https://github.com/OE4T/linux-tegra-4.9/. Let's try to fix this. Mmm, do not know how (yet). Repeat bitbake, now it seems to work? Perhaps it was a hickup in the git clone?
+
+However, again, now with WSL2/Ubuntu-22.04 the error `libstdc++.so.6: version `GLIBCXX_3.4.30' not found` is thrown. Perhaps try to do this Yocto build from a Ubuntu-22.04 docker image?
 
 ### Buildroot
 - https://github.com/celaxodon/buildroot/tree/feat/jetson-nano-support-latest/board/nvidia/jetson_nano
