@@ -96,7 +96,15 @@ Aha: URL should probably be: https://github.com/OE4T/linux-tegra-4.9/. Let's try
 ### Buildroot
 - https://github.com/celaxodon/buildroot/tree/feat/jetson-nano-support-latest/board/nvidia/jetson_nano
 
-With this latest branch, building seems to be working, for now. Building Linux_for_Tegra fails with:
+With this latest branch, building seems to be working, for now. 
+
+Fix host-m4 build by splitting line in `./output/build/host-m4-1.4.18/lib/c-stack.c`:
+```
+#elif HAVE_LIBSIGSEGV      
+# if  (SIGSTKSZ < 16384)
+```
+
+Building Linux_for_Tegra fails with:
 
 ```
 make[2]: *** No rule to make target 'arch/arm64/boot/dts/..//hardware/nvidia/platform/t210/porg/kernel-dts/tegra210-p3448-0000-p3449-0000-a00.dts', needed by 'arch/arm64/boot/dts/_ddot_//hardware/nvidia/platform/t210/porg/kernel-dts/tegra210-p3448-0000-p3449-0000-a00.dtb'.  Stop.
@@ -106,7 +114,12 @@ cc1: fatal error: arch/arm64/boot/dts/..: No such file or directory
 compilation terminated.
 ```
 
-This looks familiar. Trying to find a patch for this.
+This looks familiar. Trying to find a patch for this. In `./output/build/host-m4-1.4.18/lib/c-stack.c`: (see https://forums.developer.nvidia.com/t/failed-to-make-l4t-kernel-dts/116399/9)
+
+```
+E =
+the-space = $E $E
+```
 
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
