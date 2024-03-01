@@ -121,6 +121,10 @@ E =
 the-space = $E $E
 ```
 
+New build error: see https://stackoverflow.com/a/76457126. To solve, add `--disable-werrror` in `package/localedef/localedef.mk` at the `./configure` call. 
+
+Build complete!
+
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
 
