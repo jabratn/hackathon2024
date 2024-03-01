@@ -82,7 +82,31 @@ Install and build is looking good, but eventually breaks with:
 
 ```| bin/cmake: /home/bartjan/Sandbox/yocto/tegra-bsp-honister/build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by bin/cmake)```
 
-Possible solution is to try to change GCC version in bitbake recipies (for native and cross build) from 11.2.0 to 11.4.0 (used in Linux Mint of build machine).
+However, when building on WSL2/Ubuntu-22.04 it seems to go somewhat better. But now failed with:
+
+```
+Cloning into bare repository '/home/bartj/build/tegra-bsp-honister/build/downloads/git2/github.com.git.OE4T.linux-tegra-4.9'...
+remote: Not Found
+fatal: repository 'https://github.com/git/OE4T/linux-tegra-4.9/' not found
+DEBUG: Mirror fetch failure for url git://github.com/git/OE4T/linux-tegra-4.9;protocol=https;name=machine;branch=oe4t-patches-l4t-r32.6 (original url: git://github.com/OE4T/linux-tegra-4.9;protocol=https;name=machine;branch=oe4t-patches-l4t-r32.6)
+```
+
+Aha: URL should probably be: https://github.com/OE4T/linux-tegra-4.9/. Let's try to fix this.
+
+### Buildroot
+- https://github.com/celaxodon/buildroot/tree/feat/jetson-nano-support-latest/board/nvidia/jetson_nano
+
+With this latest branch, building seems to be working, for now. Building Linux_for_Tegra fails with:
+
+```
+make[2]: *** No rule to make target 'arch/arm64/boot/dts/..//hardware/nvidia/platform/t210/porg/kernel-dts/tegra210-p3448-0000-p3449-0000-a00.dts', needed by 'arch/arm64/boot/dts/_ddot_//hardware/nvidia/platform/t210/porg/kernel-dts/tegra210-p3448-0000-p3449-0000-a00.dtb'.  Stop.
+make[2]: *** Waiting for unfinished jobs....
+  DTC     arch/arm64/boot/dts/_ddot_
+cc1: fatal error: arch/arm64/boot/dts/..: No such file or directory
+compilation terminated.
+```
+
+This looks familiar. Trying to find a patch for this.
 
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
@@ -96,5 +120,9 @@ Possible solution is to try to change GCC version in bitbake recipies (for nativ
 ### other robot
 - https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
 
-### other robot
-- https://developer.nvidia.com/embedded/community/jetson-projects/nanosaur
+## Ideas for 3d-reconstruction and mapping
+- https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox
+- https://developer.nvidia.com/blog/building-collaborative-robotics-using-ros-and-isaac-sdk/
+- https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam
+- https://developer.nvidia.com/isaac-ros and https://nvidia-isaac-ros.github.io/releases/index.html
+- https://github.com/IntelRealSense/realsense-ros/tree/ros2-development
