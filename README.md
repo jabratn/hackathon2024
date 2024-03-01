@@ -49,6 +49,8 @@ Install and build is looking good, but eventually breaks with:
 
 ```| bin/cmake: /home/bartjan/Sandbox/yocto/tegra-bsp-honister/build/tmp/sysroots-uninative/x86_64-linux/usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by bin/cmake)```
 
+However, when building on WSL2/Ubuntu-... it seems to go somewhat better. **TBC**
+
 ### Ubuntu 20.04 on Jetson nano
 - https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
 
@@ -60,6 +62,11 @@ Install and build is looking good, but eventually breaks with:
 
 ### other robot
 - https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
+
+### Buildroot
+- https://github.com/celaxodon/buildroot/tree/feat/jetson-nano-support-latest/board/nvidia/jetson_nano
+
+WIth this latest branch, building seems to be wrking, for now. **TBC**
 
 ## Ideas for 3d-reconstruction and mapping
 - https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox
