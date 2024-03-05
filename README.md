@@ -1,10 +1,23 @@
 # hackathon2024
 
 ## Parts
-Jetson nano
+
+### Jetson nano
 - 64GB SD-card
 - wifi USB-dongle
-- l4t r32.7.4
+- yocto build with l4t r32.7.4
+  - based on: https://developer.ridgerun.com/wiki/index.php/Yocto_Support_for_NVIDIA_Jetson_Platforms_-_Setting_up_Yocto
+  - alternative: https://github.com/OE4T/tegra-demo-distro and https://github.com/OE4T/meta-tegra
+  - prepare a common yocto downloads and sstate_dir to cache download results
+
+### Jetson Xavier NX
+- Jetpack 5.1.3 - l4t r35.5.0
+- docker image ros2 with realsense
+  - https://nvidia-isaac-ros.github.io/index.html and https://nvidia-isaac-ros.github.io/getting_started/hardware_setup/sensors/realsense_setup.html
+
+### Robot
+- platform with mecanum (omnidirectional) wheels
+- Raspberry pico with 4x motor controller
 
 ## Installing ROS2
 
