@@ -9,6 +9,7 @@
   - based on: https://github.com/OE4T/tegra-demo-distro and https://github.com/OE4T/meta-tegra
   - alternative and hints: https://developer.ridgerun.com/wiki/index.php/Yocto_Support_for_NVIDIA_Jetson_Platforms_-_Setting_up_Yocto
   - flashing the jetson: https://github.com/OE4T/meta-tegra/wiki/Flashing-the-Jetson-Dev-Kit
+  - add meta-ros approx. following https://news.accelerationrobotics.com/ros-2-humble-in-nvidia-jetson-nano-with-yocto/ (replace Honister by Kirkstone)
 
 ### Jetson Xavier NX
 - Jetpack 5.1.3 - l4t r35.5.0
