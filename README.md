@@ -171,8 +171,9 @@ Build complete!
 ### other docker
 - https://github.com/2b-t/realsense-ros2-docker
 
-### other robot
+### other robots
 - https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
+- https://hackaday.io/project/175387-jetson-nano-robot-realsense-rplidar-joysticks
 
 ## Ideas for 3d-reconstruction and mapping
 - https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox
