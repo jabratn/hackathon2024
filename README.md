@@ -184,3 +184,6 @@ Build complete!
 - https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam
 - https://developer.nvidia.com/isaac-ros and https://nvidia-isaac-ros.github.io/releases/index.html
 - https://github.com/IntelRealSense/realsense-ros/tree/ros2-development
+
+### IMU6050
+- example with ROS1 - https://automaticaddison.com/visualize-imu-data-using-the-mpu6050-ros-and-jetson-nano/
