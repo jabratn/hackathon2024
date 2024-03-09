@@ -175,6 +175,9 @@ Build complete!
 - https://www.enthusiasticroboticist.com/blog/ros-2-on-jetson-nano-using-docker/
 - https://hackaday.io/project/175387-jetson-nano-robot-realsense-rplidar-joysticks
 
+### ROS2 on nano
+- https://github.com/griz1112/build-ros2-foxy-for-jetson
+
 ## Ideas for 3d-reconstruction and mapping
 - https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox
 - https://developer.nvidia.com/blog/building-collaborative-robotics-using-ros-and-isaac-sdk/
