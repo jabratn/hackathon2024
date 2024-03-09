@@ -177,6 +177,7 @@ Build complete!
 
 ### ROS2 on nano
 - https://github.com/griz1112/build-ros2-foxy-for-jetson
+- https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main
 
 ## Ideas for 3d-reconstruction and mapping
 - https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox
