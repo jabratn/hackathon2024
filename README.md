@@ -17,6 +17,7 @@ Latest success (?):
 - build foxy, opencv (and optionally pytorch) - https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main/scripts
   - use pyenv to install python 3.10.4 (for error "future feature annotations is not defined")
   - install newer version of cmake (>=11)
+- docker pull nvidiajetson/l4t-ros2-foxy-pytorch:r32.5
 
 ### Jetson Xavier NX
 - Jetpack 5.1.3 - l4t r35.5.0
