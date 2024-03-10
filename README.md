@@ -10,12 +10,23 @@
   - alternative and hints: https://developer.ridgerun.com/wiki/index.php/Yocto_Support_for_NVIDIA_Jetson_Platforms_-_Setting_up_Yocto
   - flashing the jetson: https://github.com/OE4T/meta-tegra/wiki/Flashing-the-Jetson-Dev-Kit
   - add meta-ros approx. following https://news.accelerationrobotics.com/ros-2-humble-in-nvidia-jetson-nano-with-yocto/ (replace Honister by Kirkstone)
+ 
+Latest success (?):
+- Jetpack 4.6.1 - l4t r32.7.1
+- increase swap space to 4GB - https://github.com/JetsonHacksNano/resizeSwapMemory
+- build foxy, opencv (and optionally pytorch) - https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main/scripts
 
 ### Jetson Xavier NX
 - Jetpack 5.1.3 - l4t r35.5.0
 - docker image ros2 with realsense
   - https://nvidia-isaac-ros.github.io/index.html and https://nvidia-isaac-ros.github.io/getting_started/hardware_setup/sensors/realsense_setup.html
-  - 
+
+Latest success (?)
+- Jetpack 5.1.3 - l4t r35.5.0
+- https://nvidia-isaac-ros.github.io/getting_started/index.html
+  - buildfarm on jetson
+  - compute setup
+  - sensors setup - realsense
 
 ### Robot model
 - platform with mecanum (omnidirectional) wheels - https://www.waveshare.com/product/robotics/mobile-robots/robot-chassis.htm?sku=24420
