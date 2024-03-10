@@ -2,7 +2,7 @@
 
 ## Parts
 
-### Jetson nano
+### Jetson Nano
 - 64GB SD-card
 - wifi USB-dongle
 - yocto build kirkstone-l4t-r32.7.x
@@ -32,6 +32,12 @@ Latest success (?):
   - buildfarm on jetson
   - compute setup
   - sensors setup - realsense
+
+### Raspberry Pi4
+- https://docs.ros.org/en/humble/How-To-Guides/Installing-on-Raspberry-Pi.html#raspberry-pi-os-with-ros-2-in-docker
+- flash Raspian using raspi-imager (Raspberry Pi OS Lite 64bit)
+- setup docker (install docker.io, `sudo usermod -aG docker $USER`, etc.)
+- docker pull ros:humble-perception (or similar)
 
 ### Robot model
 - platform with mecanum (omnidirectional) wheels - https://www.waveshare.com/product/robotics/mobile-robots/robot-chassis.htm?sku=24420
