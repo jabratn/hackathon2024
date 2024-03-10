@@ -13,18 +13,20 @@
  
 Latest success (?):
 - Jetpack 4.6.1 - l4t r32.7.1
-- increase swap space to 4GB - https://github.com/JetsonHacksNano/resizeSwapMemory
-- build foxy, opencv (and optionally pytorch) - https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main/scripts
-  - use pyenv to install python 3.10.4 (for error "future feature annotations is not defined")
-  - install newer version of cmake (>=11)
-- docker pull nvidiajetson/l4t-ros2-foxy-pytorch:r32.5
+- docker pull dustynv/ros:humble-desktop-l4t-r32.7.1
+
+> - increase swap space to 4GB - https://github.com/JetsonHacksNano/resizeSwapMemory
+> - build foxy, opencv (and optionally pytorch) - https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main/scripts
+>   - use pyenv to install python 3.10.4 (for error "future feature annotations is not defined")
+>   - install newer version of cmake (>=11)
+> - docker pull nvidiajetson/l4t-ros2-foxy-pytorch:r32.5
 
 ### Jetson Xavier NX
 - Jetpack 5.1.3 - l4t r35.5.0
 - docker image ros2 with realsense
   - https://nvidia-isaac-ros.github.io/index.html and https://nvidia-isaac-ros.github.io/getting_started/hardware_setup/sensors/realsense_setup.html
 
-Latest success (?)
+Latest success (?):
 - Jetpack 5.1.3 - l4t r35.5.0
 - https://nvidia-isaac-ros.github.io/getting_started/index.html
   - buildfarm on jetson
