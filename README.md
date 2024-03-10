@@ -15,6 +15,8 @@ Latest success (?):
 - Jetpack 4.6.1 - l4t r32.7.1
 - increase swap space to 4GB - https://github.com/JetsonHacksNano/resizeSwapMemory
 - build foxy, opencv (and optionally pytorch) - https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main/scripts
+  - use pyenv to install python 3.10.4 (for error "future feature annotations is not defined")
+  - install newer version of cmake (>=11)
 
 ### Jetson Xavier NX
 - Jetpack 5.1.3 - l4t r35.5.0
